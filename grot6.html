@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page / Home</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1e1e24;
+            color: #f5f5f7;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Top Header Navigation */
+        header {
+            background-color: #2a2b36;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom: 2px solid #3a3b4c;
+        }
+
+        .logo-placeholder {
+            font-weight: bold;
+            color: #ff5964;
+            font-size: 1.2rem;
+        }
+
+        .search-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #4a4b5c;
+            background-color: #121216;
+            color: #fff;
+            outline: none;
+        }
+
+        .search-bar:focus {
+            border-color: #35a7ff;
+        }
+
+        .header-right {
+            width: 40px;
+            height: 40px;
+            background-color: #4a4b5c;
+            border-radius: 50%;
+        }
+
+        /* Main App Layout Split */
+        .app-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Left Side Menu Bar */
+        sidebar {
+            background-color: #252630;
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            gap: 15px;
+            border-right: 2px solid #3a3b4c;
+        }
+
+        /* Essential link resetting for sidebar anchors */
+        sidebar a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .sidebar-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #3a3b4c;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-icon:hover {
+            background-color: #35a7ff;
+            border-radius: 8px;
+        }
+
+        /* Dashboard Content Area */
+        main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        /* Essential link resetting for content headings */
+        .section-title a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .friends-avatar-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: #ff5964;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Card Row Grid */
+        .grid-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        /* Essential link resetting for card wrappers */
+        .grid-container a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card {
+            background-color: #2a2b36;
+            width: 200px;
+            height: 250px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #3a3b4c;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #35a7ff;
+        }
+
+        .card-image-slot {
+            height: 160px;
+            background-color: #3a3b4c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        /* Color styling to match your exact card drawings */
+        .card-image-slot.sliding {
+            background: linear-gradient(45deg, #ff5964, #ff2a35);
+        }
+
+        .card-image-slot.gem {
+            background: linear-gradient(45deg, #35a7ff, #38ef7d);
+        }
+
+        .card-title {
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            background-color: #2a2b36;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">LOGO</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <div class="header-right"></div>
+    </header>
+
+    <div class="app-container">
+        <sidebar>
+            <a href="index.html" title="Home"><div class="sidebar-icon">🏠</div></a>
+            <a href="profile.html" title="Profile"><div class="sidebar-icon">👤</div></a>
+            <a href="games-library.html" title="Games"><div class="sidebar-icon">🎮</div></a>
+            <a href="messages.html" title="Messages"><div class="sidebar-icon">💬</div></a>
+            <a href="settings.html" title="Settings"><div class="sidebar-icon">⚙️</div></a>
+            <a href="achievements.html" title="Achievements"><div class="sidebar-icon">🏆</div></a>
+        </sidebar>
+
+        <main>
+            <h1 class="section-title">
+                <a href="friends.html">
+                    <span class="friends-avatar-placeholder"></span> 
+                    Friends
+                </a>
+            </h1>
+
+            <div class="grid-container">
+                <a href="sliding-death.html">
+                    <div class="game-card">
+                        <div class="card-image-slot sliding">💀</div>
+                        <div class="card-title">Sliding Death</div>
+                    </div>
+                </a>
+
+                <a href="gem-game.html">
+                    <div class="game-card">
+                        <div class="card-image-slot gem">💎</div>
+                        <div class="card-title">The Gem Game</div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
